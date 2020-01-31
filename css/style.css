@@ -1,0 +1,293 @@
+* {
+  font-family: Arial;
+  margin: 0;
+  padding: 0; 
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 2500px;
+  box-sizing: border-box;
+}
+
+#imgInHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+  background-color: #FFF3F3; 
+}
+
+#imgInHeaderLeft {
+  width: 40%; 
+}
+
+#CFlogo {
+  max-width: 50%;
+  min-width: 40%;
+  padding-left: 5%;
+  text-align: left; 
+}
+
+#imgInHeaderRight {
+  width: 60%;
+  text-align: right; 
+}
+
+#CodeFactory {
+  max-width: 70%;
+  min-width: 50%;
+  padding: 2%;
+  padding-right: 5%; 
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  background-color: #8E1616;
+  padding: 0;
+  overflow: hidden; 
+}
+
+ul, #navULfooter {
+  padding-left: 2%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row; 
+}
+
+li {
+  margin-right: 5%;
+  list-style-type: none;
+  padding: 2% 0 2% 10%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 400%; 
+}
+
+.TextTopLeft{
+  font-size: 390%;
+  color: white;
+  padding-top: 10px;
+  margin-left: 70px;
+}
+
+.background{
+  margin-top: 0;
+  background: url("traffic.jpg");
+  background-size: cover;
+  height: 1400px;
+  background-repeat: no-repeat;
+}
+
+#box{
+  border: 3px solid #808080;
+  margin-top: 6%;
+  margin-left: 15%;
+  width: 70%;
+  height: 83.5%;
+  box-sizing: border-box;
+  background: rgba(197,197,197,0.7);
+}
+h2{
+  font-size: 400%;
+  text-align: center;
+}
+.personal1 ,
+.personal2 {
+  width: 100%;
+  margin: 10px 0;
+  margin-left: 18%;
+}
+
+input ,
+select{
+  padding: 20px 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  outline: none;
+  transition: all 0.22 ease;
+  font-size: 250%;
+}
+
+label{
+  margin-bottom: 5px;
+  font-size: 250%;
+  margin-left: 0 ;
+}
+
+.personal1 .kontakt,
+.personal2 .kontakt2{
+  width: 29.9%;
+  float: left;
+  margin-right: 5%;
+} 
+
+#countries{
+  font-size: 250%;
+}
+
+button{
+  border: 1px solid green;
+  font-size: 250%;
+  border-radius: 10px;
+  color: white;
+  background-color: green;
+  width: 30%;
+  padding: 20px 5px;
+  margin-top: 50px ;
+  margin-left: 35%;
+}
+
+.calc{
+  font-size: 100%;
+  color: green;
+  margin-left: 27%;
+  margin-top: 20%;
+}
+
+.THead{
+  background-color: #CECECE;
+  font-size: 500%;
+  text-align: center;
+  color: #393939;
+}
+
+.Text{
+  background-color: #CECECE;
+  font-size: 390%;
+  text-align: center;
+  color: #393939;
+}
+
+.container{
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.box1 , .box2{
+  width: 35%;
+  border-top: 3px solid black;
+  box-shadow: 0px 0px 6px 2px rgba(171,162,171,1);
+}
+
+.zeichen{
+  color: #93D4D6;
+  size: 100%;
+}
+
+.titel{
+  color: #5298C7;
+  font-size: 300%;
+  padding-top: 50px; 
+}
+
+.mehrheit{
+  font-size: 250%;
+}
+
+h3{
+  font-size: 350%;
+}
+
+p:not(.TextTopLeft) , h3{
+  margin-top: 10px;
+  border: 1px solid white;
+  width: 75%;
+  margin-left: 12%;
+  padding-bottom: 30px;
+
+}
+
+hr{
+  width: 75%;
+  margin-left: 12%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #1A1A1A;
+  overflow: hidden;
+  color: white;
+  margin-top: 6%; 
+}
+
+#footerNAV {
+  display: flex;
+  padding-top: 1%; 
+}
+
+#imgInFOOTERright {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+#CFlogo2 {
+  max-width: 30%;
+  min-width: 15%;
+  padding-right: 5%;
+  align-self: flex-end; 
+}
+
+#copyRight {
+  align-self: center;
+  font-size: 250%;
+  height: 150px;
+  color: white;
+}
+
+
+
+
+
+@media all and (max-width: 576px){
+  .wrapper{
+    width: 100%;
+  }
+  body{
+  font-size: 100%;
+  }
+  main{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #copyRight{
+    color: pink;
+    display: none;
+  }
+}
+
+
+
+@media all and (max-width: 768px) and (min-width: 576px){
+  .wrapper{
+    width: 100%;
+  }
+  body{
+    font-size: 100%;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+  }
+  #copyRight{
+    color: pink;
+    display: none;
+  }
+}
+
+
+
+

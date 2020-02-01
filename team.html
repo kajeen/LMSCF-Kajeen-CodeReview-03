@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team</title>
+	<style type="text/css" media="screen">
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		table {
+			border-collapse: collapse;
+			width: 90%;
+		}
+		td, th {
+			border: 1px solid gray;
+			text-align: left;
+			padding: 1rem;
+		}
+		tr:nth-child(even) {
+			background-color: lightblue;
+		}
+		img{
+			width: 90%;
+			border-collapse: collapse;
+			margin-left: 5%;
+
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">My Team</h1>		
+	<table id="employeeTable" align="center">
+	</table>
+	<img src="img/ella.jpg" alt="ella">
+
+<script type="text/javascript">
+	let employeesList = {
+
+		   "employees": [{
+
+		       "unique_id": "01",
+
+		       "first_name": "Avjeen",
+
+		       "last_name": "Ahmed",
+
+		       "email": "avjeen.ahmed@test.com",
+
+		   }, {
+
+		       "unique_id": "02",
+
+		       "first_name": "yengin",
+
+		       "last_name": "Ahmed",
+
+		       "email": "yengin.ahmed@test.com",
+
+		   }, {
+
+		       "unique_id": "03",
+
+		       "first_name": "Ferhad",
+
+		       "last_name": "Ahmed",
+
+		       "email": "ferhad.ahmed@test.com",
+
+		   }, {
+
+		       "unique_id": "04",
+
+		       "first_name": "Kajeen",
+
+		       "last_name": "Ahmed",
+
+		       "email": "kajeen.ahmed@test.com",
+
+		   }]
+		}
+
+		let generatedTable = '<tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email</th></tr>';
+
+		for (let i in employeesList.employees) {
+			generatedTable += `
+			<tr><td>${employeesList.employees[i].unique_id}</td><td>${employeesList.employees[i].first_name}</td><td>${employeesList.employees[i].last_name}</td><td>${employeesList.employees[i].email}</td></tr>
+			`;
+		}
+
+		document.getElementById('employeeTable').innerHTML = generatedTable;
+</script>
+</body>
+</html>

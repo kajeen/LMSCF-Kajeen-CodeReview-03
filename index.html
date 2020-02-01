@@ -4,9 +4,8 @@
 	<head>
 		<meta charset="utf-8">
 		<link media="screen" rel="stylesheet" type="text/css" href="css/style.css">
-
+		<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 		<title>Code Review 3</title>
-
 	</head>
 
 	<body>
@@ -14,7 +13,7 @@
 		    <header>
 				<div id="imgInHeader">
 					<div id="imgInHeaderLeft">
-						<img id="CFlogo" src="img/logo.png" alt=" Logo">
+						<img id="CFlogo" src="img/logo1.png" alt=" Logo">
 					</div>
 
 					<div id="imgInHeaderRight" >
@@ -24,8 +23,8 @@
 
 				<nav>
 					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">Team</a></li>
+						<li><a href="1.CodeReview.html">Home</a></li>
+						<li><a href="team.html">Team</a></li>
 					</ul>
 				</nav>
 		    </header>
@@ -64,18 +63,19 @@
 			    				</div>
 			    			</div>
 			    		</div>
-			    		<button type="submit">Calculate</button>
-						<a href="" title=""><div class="calc">
+			    		<button id="calculate" type="submit">Calculate</button>
+						<div id="calc">
 							Printed calculation goes here
-						</div></a>
+						</div>
 			    	</div>
 				</div>
-
-		    	<div class="THead">
-		    		Un-complicating car coverage
-		    	</div>
-		    	<div class="Text">	
-		    		Understanding your coverage options shouldn't be so hard. <br> We'll guide you through available coverage types, <br> starting with who and what is covered.
+				<div class="middelBox">
+			    	<div class="THead">
+			    		Un-complicating car coverage
+			    	</div>
+			    	<div class="Text">	
+			    		Understanding your coverage options shouldn't be so hard. <br> We'll guide you through available coverage types, <br> starting with who and what is covered.
+			    	</div>
 		    	</div>
 
 		    	<div class="container">
@@ -101,8 +101,8 @@
 		    <footer>
 		        <div id="footerNAV">
 					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">Team</a></li>
+						<li><a href="1.CodeReview.html">Home</a></li>
+						<li><a href="team.html">Team</a></li>
 					</ul>
 				</div>
 
@@ -116,6 +116,34 @@
 		    </footer>
 		</div>
 
-	    <script href="js/JS.js"></script>
+	    <script href="js/JS.js">
+
+	    	document.getElementById('calculate').addEventListener('click', function(event){
+	    		event.preventDefault();
+	    		let inputText = document.getElementById('text').value;
+	    		let inputAge = document.getElementById('number').value;
+	    		let inputCountry = document.getElementById('countries').value;
+	    		let inputPower = document.getElementById('power').value;
+	    		let austria=document.getElementById('austria').selected;
+	    		let hungary=document.getElementById('hungary').selected;
+	    		let greece=document.getElementById('greece').selected;
+	    		let insuranceX = (inputPower * 100) / inputAge   + 50;
+	    		let insuranceY = (inputPower * 120 )/ inputAge   + 100;
+	    		let insuranceZ = (inputPower * 150 )/ (inputAge+3)   + 50;
+
+
+	    			if(austria==true){
+	    				calculateInsurance = insuranceX.toFixed(2);
+	    				document.getElementById('calc').innerHTML = inputText+", your insurance costs "+calculateInsurance+" €";
+	    			} else if(hungary==true){	    				
+	    				calculateInsurance = insuranceY.toFixed(2);
+	    				document.getElementById('calc').innerHTML = inputText+", your insurance costs "+calculateInsurance+" €";
+	    			}else{	    				
+	    				calculateInsurance = insuranceZ.toFixed(2);
+	    				document.getElementById('calc').innerHTML = inputText+", your insurance costs "+calculateInsurance+" €";
+	    			} 
+
+	    		})
+	    </script>
 	</body>
 </html>
